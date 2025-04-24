@@ -1,0 +1,148 @@
+/*! RESET BÁSICO */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+/** HEADER */
+
+header{
+    background-color: #ffff;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    padding: 10px 20px;
+}
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.logo a{
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-decoration: none;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: #333;
+    font-weight:500;
+    transition: color ease 0.3s;
+}
+.nav-links li a:hover{
+    color: #e67e22;
+}
+
+/** MAIN */
+main{
+    padding: 20px;
+}
+.feed-container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.feed-container h2{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+}
+/** ESTRUCTURA */
+.post{
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+.post:hover {
+    transform: translateY(-3px);
+}
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+.pet-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.post-info h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #34495e;
+}
+
+.post-info p {
+    font-size: 14px;
+    color: #777;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.caption {
+    padding: 15px;
+    font-size: 15px;
+    color: #444;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    padding: 10px 15px 15px;
+    border-top: 1px solid #eee;
+}
+
+.post-actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background 0.2s ease;
+}
+
+.post-actions button:hover {
+    background-color: #f1f1f1;
+    border-radius: 6px;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #555;
+    font-size: 14px;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+footer .logOut{
+    flex: 1;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+footer .footer-center{
+    flex: 2;
+    text-align: center;
+}
