@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuario</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <nav class="nav-bar" role="navigation" aria-label="Menú Principal">
+      <div class="logo">
+        <a href="index.html" aria-label="Inicio de PetBook"> 🐾 PetBook</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Explorar</a></li>
+        <li><a href="#">Crear</a></li>
+        <li><a href="#">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="feed-container" aria-label="Perfil de Usuario">
+      <h2>Perfil de Usuario</h2>
+      <div class="post-header">
+        <img src="Imagenes/YoBienGuapo.jpg" alt="Foto de perfil" class="pet-avatar">
+        <div class="post-info">
+          <h3>Mateo</h3>
+          <p>@Mateo</p>
+        </div>
+      </div>
+      <div class="post-actions">
+        <button class="like-btn" aria-label="Dar me gusta a la publicación">Me gusta</button>
+        <button class="comment-btn" aria-label="Comentar en la publicación">Comentar</button>
+      </div>
+      <section class="profile-info">
+        <h3>Información del perfil</h3>
+        <ul>
+          <li><strong>Correo electrónico:</strong> correo@example.com</li>
+          <li><strong>Fecha de nacimiento:</strong> 12 de marzo de 1837</li>
+          <li><strong>Ubicación:</strong> Teselia</li>
+        </ul>
+      </section>
+      <section class="profile-posts">
+        <h3>Publicaciones</h3>
+        <section class="feed-container" aria-label="Publicaciones Recientes">
+          <h2>Publicaciones Recientes</h2>
+          <article class="post">
+            <div class="post-header">
+              <img src="Imagenes/YoBienGuapo.jpg" alt="Foto de la mascota Pelusa" class="pet-avatar" />
+              <div class="post-info">
+                <h3>Pelusa</h3>
+                <p>Gata Siamesa - 5 años</p>
+              </div>
+            </div>
+            <figure>
+              <img src="Imagenes/GatoMimiendo.jpg" alt="Pelusa tomando siesta" class="post-image" />
+              <figcaption class="caption">Hoy fue día de spa y siesta ☁️</figcaption>
+            </figure>
+            <div class="post-actions">
+              <button class="like-btn" aria-label="Dar me gusta a la publicación">❤️ Me gusta</button>
+              <button class="comment-btn" aria-label="Comentar en la publicación">💬 Comentar</button>
+            </div>
+          </article>
+        </section>
+
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>
