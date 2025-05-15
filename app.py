@@ -9,7 +9,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 # Creamos una instancia de la aplicación Flask
 app = Flask(__name__)
 
-app.secret_key = 'Xw040*ko>@]4' # Cambia esto por una clave secreta real para tu aplicación
+app.secret_key = '******' # Cambia esto por una clave secreta real para tu aplicación
 
 # Carpeta donde se guardarán las imágenes subidas por los usuarios
 app.config['UPLOAD_FOLDER'] = 'static/images'
@@ -18,10 +18,10 @@ app.config['UPLOAD_FOLDER'] = 'static/images'
 # Configuración de conexión a MySQL (phpMyAdmin)
 # ========================================
 db_config = {
-    'host': 'localhost',           # Dirección del servidor MySQL (localhost si es local)
-    'user': 'root',                # Usuario de MySQL (por defecto es "root" en XAMPP)
-    'password': 'McS_47_2006',            # Cambia esto por tu contraseña real de MySQL
-    'database': 'petbook'       # Nombre de la base de datos que creaste en phpMyAdmin
+    'host': '****',           # Dirección del servidor MySQL (localhost si es local)
+    'user': '****',                # Usuario de MySQL (por defecto es "root" en XAMPP)
+    'password': '******',            # Cambia esto por tu contraseña real de MySQL
+    'database': '****'       # Nombre de la base de datos que creaste en phpMyAdmin
 }
 
 # ========================================
