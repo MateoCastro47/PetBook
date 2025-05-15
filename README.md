@@ -1,6 +1,6 @@
-# 🐾 PetConnect - Red Social de Mascotas y Adopción
+# 🐾 PetBook - Red Social de Mascotas y Adopción
 
-**PetConnect** es una aplicación web que funciona como una red social centrada en mascotas, permitiendo a los usuarios compartir fotos, historias y también facilitar la adopción de animales. Esta es la **versión 1.0** del proyecto, desarrollada con **HTML**, **CSS** y **Flask (Python)**.
+**PetBook** es una aplicación web que funciona como una red social centrada en mascotas, permitiendo a los usuarios compartir fotos, historias y también facilitar la adopción de animales. Esta es la **versión 1.0** del proyecto, desarrollada con **HTML**, **CSS** y **Flask (Python)**.
 
 ## 🚀 Características Principales
 
