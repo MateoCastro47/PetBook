@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetBook</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+  <header>
+    <nav class="nav-bar" role="navigation" aria-label="Menú Principal">
+      <div class="logo">
+        <a href="{{ url_for('inicio')}}">🐾 PetBook</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('inicio')}}">Inicio</a></li>
+        <li class="dropToggle">Explorar
+          <ul class="dropMenu hidden">
+            <li>perros</li>
+            <li>gatos</li>
+            <li>conejos</li>
+          </ul>
+        </li>
+        <li><a href="{{ url_for('crear_perfil')}}">Crear</a></li>
+        <li><a href="{{ url_for('ver_perfil')}}">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="feed-container" aria-label="Publicaciones Recientes">
+      <h2>Publicaciones Recientes</h2>
+      <article class="post">
+        <div class="post-header">
+          <img src="Imagenes/YoBienGuapo.jpg" alt="Foto de la mascota Pelusa" class="pet-avatar" />
+          <div class="post-info">
+            <h3>Pelusa</h3>
+            <p>Gata Siamesa - 5 años</p>
+          </div>
+        </div>
+        <figure>
+          <img src="Imagenes/GatoMimiendo.jpg" alt="Pelusa tomando siesta" class="post-image" />
+          <figcaption class="caption">Hoy fue día de spa y siesta ☁️</figcaption>
+        </figure>
+        <div class="post-actions">
+          <button class="like-btn" aria-label="Dar me gusta a la publicación">❤️ Me gusta</button>
+          <button class="comment-btn" aria-label="Comentar en la publicación">💬 Comentar</button>
+        </div>
+      </article>
+    </section>
+    <section class="feed-container" aria-label="Publicaciones Recientes">
+      <article class="post">
+        <div class="post-header">
+          <img src="Imagenes/YoBienGuapo.jpg" alt="Foto de la mascota Pelusa" class="pet-avatar" />
+          <div class="post-info">
+            <h3>Pelusa</h3>
+            <p>Gata Siamesa - 5 años</p>
+          </div>
+        </div>
+        <figure>
+          <img src="Imagenes/GatoMimiendo.jpg" alt="Pelusa tomando siesta" class="post-image" />
+          <figcaption class="caption">Hoy fue día de spa y siesta ☁️</figcaption>
+        </figure>
+        <div class="post-actions">
+          <button class="like-btn" aria-label="Dar me gusta a la publicación">❤️ Me gusta</button>
+          <button class="comment-btn" aria-label="Comentar en la publicación">💬 Comentar</button>
+        </div>
+      </article>
+    </section>
+    <section class="feed-container" aria-label="Publicaciones Recientes">
+      <article class="post">
+        <div class="post-header">
+          <img src="Imagenes/YoBienGuapo.jpg" alt="Foto de la mascota Pelusa" class="pet-avatar" />
+          <div class="post-info">
+            <h3>Pelusa</h3>
+            <p>Gata Siamesa - 5 años</p>
+          </div>
+        </div>
+        <figure>
+          <img src="Imagenes/GatoMimiendo.jpg" alt="Pelusa tomando siesta" class="post-image" />
+          <figcaption class="caption">Hoy fue día de spa y siesta ☁️</figcaption>
+        </figure>
+        <div class="post-actions">
+          <button class="like-btn" aria-label="Dar me gusta a la publicación">❤️ Me gusta</button>
+          <button class="comment-btn" aria-label="Comentar en la publicación">💬 Comentar</button>
+        </div>
+      </article>
+    </section>
+    <section class="feed-container" aria-label="Publicaciones Recientes">
+      <article class="post">
+        <div class="post-header">
+          <img src="Imagenes/YoBienGuapo.jpg" alt="Foto de la mascota Pelusa" class="pet-avatar" />
+          <div class="post-info">
+            <h3>Pelusa</h3>
+            <p>Gata Siamesa - 5 años</p>
+          </div>
+        </div>
+        <figure>
+          <img src="Imagenes/GatoMimiendo.jpg" alt="Pelusa tomando siesta" class="post-image" />
+          <figcaption class="caption">Hoy fue día de spa y siesta ☁️</figcaption>
+        </figure>
+        <div class="post-actions">
+          <button class="like-btn" aria-label="Dar me gusta a la publicación">❤️ Me gusta</button>
+          <button class="comment-btn" aria-label="Comentar en la publicación">💬 Comentar</button>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <a href="{{ url_for('login')}}" class="logOut">LogOut</a>
+  </footer>
+  <script>
+    const dropToggle = document.querySelector('.dropToggle');
+    const dropMenu = document.querySelector('.dropMenu');
+    dropToggle.addEventListener('click', () => {
+    dropMenu.classList.toggle('hidden');
+    });
+    </script>
+</body>
+
+</html>

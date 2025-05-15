@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Perfil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar" role="navigation" aria-label="Menú Principal">
+            <div class="logo">
+                <a href="{{ url_for('inicio')}}" aria-label="Inicio de PetBook">🐾 PetBook</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('inicio')}}">Inicio</a></li>
+                <li><a href="#">Explorar</a></li>
+                <li><a href="{{ url_for('crear_perfil')}}">Crear Perfil</a></li>
+                <li><a href="{{ url_for('ver_perfil')}}">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="create-profile" aria-label="Formulario de Crear Perfil">
+            <h2>Crear Perfil de Usuario</h2>
+            <form action="{{ url_for('crear_perfil') }}" method="POST" enctype="multipart/form-data">
+                
+                <label for="username">Nombre de Usuario:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="birthdate">Fecha de Nacimiento:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+
+                <label for="location">Ubicación:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="profileImage">Foto de Perfil:</label>
+                <input type="file" id="profileImage" name="profileImage" accept="image/*" required class="file-input">
+
+                <button type="submit">Crear Perfil</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="logOut">Cerrar Sesión</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión | PetBook</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar" role="navigation" aria-label="Menú Principal">
+            <div class="logo">
+                <a href="{{ url_for('inicio') }}">🐾 PetBook</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="auth-container">
+            <h2>Iniciar Sesión</h2>
+            <!-- Mensaje de error -->
+            {% if error %}
+                <div class="alert error">{{ error }}</div>
+            {% endif %}
+            
+            <form action="{{ url_for('login') }}" method="POST" class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                {% with messages = get_flashed_messages(category_filter=["email_error"]) %}
+                {% if messages %}
+                    <div class="error-message">
+                        {{ messages[0] }}  <!-- Muestra el primer mensaje -->
+                    </div>
+                {% endif %}
+                {% endwith %}
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <!-- Solo muestra el error si existe y es de tipo password_error -->
+                {% with messages = get_flashed_messages(category_filter=["password_error"]) %}
+                {% if messages %}
+                <div class="error-message">
+                {{ messages[0] }}
+                </div>
+                {% endif %}
+                {% endwith %}
+                <button type="submit">Ingresar</button>
+            </form>
+
+            <div class="auth-switch">
+                <p>¿No tienes cuenta? <a href="{{ url_for('crear_perfil') }}">Regístrate aquí</a></p>
+            </div>
+        </section>
+    </main>
+    <script>
+        if (localStorage.getItem('user_id')) {
+            window.location.href = '/home';  // Si el usuario ya está logueado, redirige al home
+        }
+        document.querySelector("form").addEventListener("submit", function(e) {
+    var email = document.querySelector("#email").value;
+    var password = document.querySelector("#password").value;
+    
+    if (email == "" || password == "") {
+        e.preventDefault();  // Evitar que el formulario se envíe
+        alert("Por favor, rellena todos los campos.");
+    }
+    });
+    </script>    
+</body>
+</html>
